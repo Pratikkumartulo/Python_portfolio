@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-container">
+  <div class="projects-content">
+    <div class="projects-header">
+      <h2>My <span class="gradient-text">Projects</span></h2>
+      <p class="contact-subtitle">Here are some of the projects I've worked on</p>
+    </div>
+
+    <div class="projects-grid">
+      {% for sl, desc in user['projects'].items() %}
+      <div class="project-card">
+        <h3>{{ desc['name'] }}</h3>
+        <p><strong>Tech Stack:</strong> {{ desc['tech'] }}</p>
+        <p>{{ desc['desc'] }}</p>
+        <a href="{{ desc['link'] }}" class="project-link" target="_blank">View Project</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

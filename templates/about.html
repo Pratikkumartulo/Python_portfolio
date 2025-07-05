@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+    
+</head>
+<body>
+    <div class="content-container">
+        <div class="about-content">
+            <div class="bio-section">
+                <h1>About Me</h1>
+                <p class="bio-text">{{ user['bio'] }}</p>
+            </div>
+
+            <div class="section-card">
+                <h2>💻 My Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-row">
+                        <div class="skills-track skills-track-left">
+                          {% for skill in user['skills'] %}
+                            <div class="skill-box">{{ skill }}</div>
+                          {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Bottom row - scrolling right -->
+                    <div class="skills-row">
+                        <div class="skills-track skills-track-right">
+                          {% for skill in user['skills'][::-1] %}
+                            <div class="skill-box">{{ skill }}</div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>🎓 Education</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Institution</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Percentage/CGPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>SCBHS</td>
+                            <td>CBSE</td>
+                            <td>2019</td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>SCBHS</td>
+                            <td>CBSE</td>
+                            <td>2021</td>
+                            <td>89%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-card">
+                <h2>🏆 Achievements</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Programme</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2nd</td>
+                            <td>SIH Hackathon</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1st</td>
+                            <td>Web Development Competition</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

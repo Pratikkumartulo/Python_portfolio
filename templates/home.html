@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-container">
+    <div class="home-content">
+        <div class="home-text">
+            <div class="welcome-message">{{ user['message'] }}</div>
+            <h1 class="main-title">
+                WEB <span class="highlight">DESIGNER</span>
+            </h1>
+            <div class="intro-text">{{ user['intro'] }}</div>
+            <div class="home-buttons">
+                <a href="{{ url_for('about') }}" class="btn-primary">About Me</a>
+                <a href="{{ url_for('projects') }}" class="btn-secondary">My Work</a>
+            </div>
+            <div class="social-icons">
+                <a href="{{ user['linkedin'] }}" target="_blank" class="social-icon">💼</a>
+                <a href="{{ user['github'] }}" target="_blank" class="social-icon">🔗</a>
+                <a href="mailto:{{ user['email'] }}" class="social-icon">📧</a>
+            </div>
+        </div>
+        <div class="home-image">
+            <img src="{{ user['profilePic'] }}" alt="Profile Picture" class="profile-pic">
+        </div>
+    </div>
+</div>
+{% endblock content %}
