@@ -4,7 +4,7 @@ user_data = {
     'profilePic': "../static/images/profile.png",
     
     'bio': (
-        "I'm a 2nd-year B.Tech student at Gandhi Institute of Engineering and Technology (GIET), Gunupur, "
+        "I'm a 3rd-year B.Tech student at Gandhi Institute of Engineering and Technology (GIET), Gunupur, "
         "deeply enthusiastic about building scalable web applications and crafting clean, efficient code. "
         "With a strong grip over the MERN stack and a hunger for learning, I've developed various real-world projects "
         "ranging from job scrapers to e-commerce platforms. I believe in continuous learning, community collaboration, "
@@ -21,19 +21,19 @@ user_data = {
         10: {
             'school': 'SCBHS',
             'course': 'CBSE',
-            'year': '2019',
-            'percentage': '92%'
+            'year': '2021',
+            'percentage': '90%'
         },
         12: {
             'school': 'SCBHS',
             'course': 'CBSE',
-            'year': '2021',
+            'year': '2023',
             'percentage': '89%'
         },
     },
 
     'achv': {
-        1: {'pos': '2nd', 'prog': "SIH Hackathon"},
+        1: {'pos': '2nd', 'prog': "SIH Hackathon 2024"},
         2: {'pos': '1st', 'prog': "Web Development Competition"}
     },
 
